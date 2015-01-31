@@ -1,0 +1,63 @@
+---
+- hosts: localhost
+  connection: local
+
+  tasks:
+  - name: Tap Homebrew Repos
+    homebrew_tap: name={{ item }} state=present
+    with_items:
+      - homebrew/versions
+      - caskroom/versions 
+      - caskroom/cask
+      - caskroom/fonts
+
+  - name: Install Homebrew Formulae
+    homebrew: name={{ item }} state=present
+    with_items:
+      - wget
+      - ack
+      - git
+      - gnu-sed
+      - imagemagick
+      - brew-cask
+      - tree
+      - z
+
+  - name: Install Weechat with Python and Perl
+    homebrew: name=weechat state=present install_options=with-python,with-perl
+
+  - name: Install MacVim and override system Vim
+    homebrew: name=macvim state=present install_options=override-system-vim
+
+  - name: Install Homebrew Casks
+    homebrew_cask: name={{ item }} state=present
+    with_items:
+      - vagrant
+      - google-chrome
+      - firefox
+      - vlc
+      - firefox
+      - virtualbox
+      - slack
+      - iterm2
+      - alfred
+      - bartender
+      - totalfinder
+      - appcleaner
+      - dropbox
+      - filezilla
+      - transmit
+      - font-source-code-pro
+      - hyperdock
+      - hyperswitch
+      - seil
+      - karabiner
+      - sublime-text3
+      - xampp
+      - razer-synapse
+      - catchmouse
+      - spotify
+      - transmission
+      - daisydisk
+      - android-file-transfer
+      - calibre
