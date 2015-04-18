@@ -32,11 +32,11 @@
   - name: Install Homebrew Casks
     homebrew_cask: name={{ item }} state=present
     with_items:
+      - amethyst
       - vagrant
       - google-chrome
       - firefox
       - vlc
-      - firefox
       - virtualbox
       - slack
       - iterm2
@@ -48,14 +48,12 @@
       - filezilla
       - transmit
       - font-source-code-pro
-      - hyperdock
-      - hyperswitch
+      - witch
+      - bettertouchtool
       - seil
       - karabiner
       - sublime-text3
       - xampp
-      - razer-synapse
-      - catchmouse
       - spotify
       - transmission
       - daisydisk
