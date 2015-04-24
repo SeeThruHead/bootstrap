@@ -44,30 +44,40 @@
   - name: Install Homebrew Casks
     homebrew_cask: name={{ item }} state=present
     with_items:
-      - amethyst
-      - vagrant
-      - google-chrome
-      - firefox
-      - vlc
-      - virtualbox
-      - slack
-      - iterm2
       - alfred
-      - bartender
-      - totalfinder
-      - appcleaner
-      - dropbox
-      - filezilla
-      - transmit
-      - font-source-code-pro
-      - witch
-      - bettertouchtool
-      - seil
-      - karabiner
-      - sublime-text3
-      - xampp
-      - spotify
-      - transmission
-      - daisydisk
+      - amethyst
       - android-file-transfer
+      - appcleaner
+      - bartender
+      - bettertouchtool
       - calibre
+      - colorpicker
+      - colorpicker-skalacolor
+      - daisydisk
+      - dropbox
+      - emacs
+      - filezilla
+      - firefox
+      - font-sauce-code-powerline
+      - font-source-code-pro
+      - google-chrome
+      - iterm2
+      - karabiner
+      - lighttable
+      - razer-synapse
+      - seil
+      - slack
+      - spectacle
+      - spotify
+      - sublime-text3
+      - teamviewer
+      - totalfinder
+      - transmission
+      - transmit
+      - unetbootin
+      - vagrant
+      - virtualbox
+      - vlc
+      - witch
+      - xampp
+
