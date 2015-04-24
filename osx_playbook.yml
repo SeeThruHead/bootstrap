@@ -22,6 +22,11 @@
       - brew-cask
       - tree
       - tmux
+      - rcm
+      - rename
+      - trash
+      - fish
+      - webkit2png
       - z
       
   - name: Install ruby gems    
