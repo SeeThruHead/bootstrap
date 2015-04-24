@@ -21,7 +21,14 @@
       - imagemagick
       - brew-cask
       - tree
+      - tmux
       - z
+      
+  - name: Install ruby gems    
+    gem: name={{ item }} state=latest
+    with_items:
+      - hcl
+      - tmuxinator
 
   - name: Install Weechat with Python and Perl
     homebrew: name=weechat state=present install_options=with-python,with-perl
